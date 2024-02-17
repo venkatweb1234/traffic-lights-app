@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Traffic lights App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Simple Traffic lights App built with React, Styled Components, and incorporating best practices for design and testing.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+- [Components](#components)
+  - [TrafficLights](#trafficlightapp)
+- [Solution Design](#solution-design)
+- [Common](#common functions)
+- [React Testing](#react-testing)
+- [Styled Components](#styled-components)
+- [App.tsx](#apptsx)
+- [Usage](#usage)
+- [Installation](#installation)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This Traffic lights App is a feature-rich solution designed to streamline task management. It leverages React for a robust user interface, while Styled Components provide a visually appealing and responsive design.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Implement a traffic light system. We are required to have 4 sets of lights, as follows.
 
-### `npm test`
+- Lights 1: Traffic is travelling south
+- Lights 2: Traffic is travelling west
+- Lights 3: Traffic is travelling north
+- Lights 4: Traffic is travelling east
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- The lights in which traffic is travelling on the same axis can be green at the same time. During normal hours all lights stay green for 20 seconds, but during peak times north and south lights are green for 40 seconds while west and east are green for 10 seconds. Peak hours are 0800 to 1000 and 1700 to 1900. Yellow lights are shown for 5 seconds before red lights are shown. Red lights stay on until the cross-traffic is red for at least 4 seconds, once a red light goes off then the green is shown for the required time(eg the sequence is reset).
 
-### `npm run build`
+- Bonus: At this intersection north bound traffic has a green right-turn signal, which stops the south bound traffic and allows north bound traffic to turn right. This is green at the end of north/south green light and stays green for 10 seconds. During this time north bound is green, north right-turn is green and all other lights are red.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### TrafficLights
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The main component serving as the entire point for the TrafficLights App. Manages the overall application structure, including C# .NET web-api end point data displayed in this TrafficLights component.
 
-### `npm run eject`
+## Common
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Defines TypeScript common function for traffic lights.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## React Testing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Test cases are written using React Testing Library to ensure the functionality and correctness of each component, reducer, and action. The testing suite covers a comprehensive range of scenarios to guarantee a robust application.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Styled Components
 
-## Learn More
+Styled Components are employed for consistent and visually appealing styling. The design is responsive, adapting to various screen sizes, and adheres to modern design principles.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## App.tsx
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The main application file where the Traffic Lights App component is rendered. This file serves as the entry point for the React application.
+
+## Usage
+
+To use the Traffic Lights App, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/venkatweb1234/todolistreactcmcmarket.git`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start or yarn start`
+4. Start the test use this command: `npm test`
+
+## Out Put Images
+
+** TodListItems Added for Desktop**
+
+- ![Reference Screenshot](src\output\TrafficLightsGreen.png)
+- ![Reference Screenshot](src\output\TrafficLightsRed.png)
+- ![Reference Screenshot](src\output\TrafficLightsYellow.png)
