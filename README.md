@@ -56,14 +56,16 @@ The main application file where the Traffic Lights App component is rendered. Th
 
 To use the Traffic Lights App, follow these steps:
 
-1. Clone the repository: `https://github.com/venkatweb1234/traffic-lights-app.git`
+1. Clone the repository: `git clone https://github.com/venkatweb1234/traffic-lights-app.git`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start or yarn start`
 4. Start the test use this command: `npm test`
 
 ## Out Put Images
 
-** TodListItems Added for Desktop**
+South, North, East, west traffic lights color will be appeared based on endpoint response. here end point is "https://localhost:7286/TrafficLight/GetTrafficData"
+
+Here I mentioned only 3 screen shots, but based on the time colors will appeared, please note that.
 
 - ![Reference Screenshot](src\output\TrafficLightsGreen.png)
 - ![Reference Screenshot](src\output\TrafficLightsRed.png)
